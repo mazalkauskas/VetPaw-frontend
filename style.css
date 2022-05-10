@@ -48,13 +48,13 @@ nav a {
 	padding: 0.5rem;
 }
 
-nav a:first-child {
+/* nav a:first-child {
 	padding-top: 0;
 }
 
 nav a:last-child {
 	padding-bottom: 0;
-}
+} */
 
 .title {
 	margin-top: 0;
@@ -87,6 +87,15 @@ input:focus {
 	color: #fff;
 	padding: 1rem 3rem;
 	text-transform: uppercase;
+}
+
+.btn2 {
+	background-color: #000;
+	color: #fff;
+	max-width: 5rem;
+	padding: 0.5rem 3rem;
+	text-align: center;
+	text-decoration: none;
 }
 
 .control {
