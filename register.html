@@ -40,29 +40,30 @@
 					</a>
 				</div>
 				<nav>
-					Don't have an account?
-					<a href="register.html">Sign Up</a>
+					Already have an account?
+					<a href="login.html">Sign In</a>
 				</nav>
 			</div>
 		</header>
 		<main>
 			<div class="container2">
-				<h1 class="title">Login to VetPaw</h1>
-				<form name="login">
+				<h1 class="title">Create your account</h1>
+				<form name="register">
+					<div class="control left">
+						<label for="username">Name</label>
+						<input type="text" name="username" id="username" placeholder="Enter a name" required />
+					</div>
 					<div class="control left">
 						<label for="email">Email</label>
 						<input type="email" name="email" id="email" placeholder="Enter your email address" required />
 					</div>
-					<div class="control">
-						<div class="row-between">
-							<label for="password">Password</label>
-							<a href="resetPass.html">Forgot password?</a>
-						</div>
-						<input type="password" name="password" id="password" placeholder="Enter a password" required />
+					<div class="control left">
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password" placeholder="Create a password" required />
 					</div>
 					<div class="msgContainer"></div>
 					<div class="control">
-						<button type="submit" class="btn">Login</button>
+						<button type="submit" class="btn">Sign Up</button>
 					</div>
 				</form>
 			</div>

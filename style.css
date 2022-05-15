@@ -8,9 +8,16 @@ header {
 
 .container {
 	padding: 1.5rem;
+	color: #003b45;
 }
 
-header .top-shelf {
+.container2 {
+	padding: 3rem;
+	text-align: center;
+	color: #003b45;
+}
+
+.row-between {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
@@ -45,7 +52,12 @@ nav a {
 	color: #b22727;
 	font-size: 1.75rem;
 	display: block;
-	padding: 0.5rem;
+	padding: 0.5rem 1rem;
+	margin-bottom: 1rem;
+	text-align: center;
+	text-decoration: none;
+	border: 0.1rem solid #b22727;
+	border-radius: 0.75rem;
 }
 
 /* nav a:first-child {
@@ -56,23 +68,33 @@ nav a:last-child {
 	padding-bottom: 0;
 } */
 
+nav a:hover {
+	background-color: #ee50074f;
+	border: 0;
+	border-radius: 0.75rem;
+	color: #fff;
+	padding: 0.5rem 1rem;
+}
+
 .title {
 	margin-top: 0;
 	margin-bottom: 1rem;
 }
 
 input {
-	border: 0;
-	border-bottom: 0.125rem solid rgb(0, 0, 0);
+	border-radius: 0.5rem;
+	border: 0.1rem solid #003b45;
 	box-sizing: border-box;
-	height: 1.5rem;
-	width: 100%;
-	padding: 0.5rem 0;
 	font-size: 1.1rem;
+	height: 2.5rem;
+	padding: 0.5rem 0.5rem;
+	width: 100%;
 }
 
 label {
+	font-size: 1.1rem;
 	font-weight: bold;
+	padding: 0.5rem 0;
 }
 
 input:focus {
@@ -82,23 +104,34 @@ input:focus {
 }
 
 .btn {
-	background-color: #000;
+	background-color: #b22727;
 	border: 0;
+	border-radius: 0.75rem;
 	color: #fff;
 	padding: 1rem 3rem;
 	text-transform: uppercase;
 }
 
 .btn2 {
-	background-color: #000;
+	background-color: #ee5007;
+	border: 0;
+	border-radius: 0.75rem;
 	color: #fff;
-	max-width: 5rem;
-	padding: 0.5rem 3rem;
-	text-align: center;
-	text-decoration: none;
+	padding: 0.5rem 1rem;
+	text-transform: uppercase;
 }
 
 .control {
+	padding: 1rem 0;
+}
+
+.left {
+	text-align: left;
+}
+
+.msgShow {
+	color: #c6072a;
+	font-size: 1.1rem;
 	padding: 1rem 0;
 }
 
@@ -106,6 +139,13 @@ input:focus {
 	.container {
 		margin: 0 auto;
 		max-width: 50rem;
+	}
+
+	.container2 {
+		margin: 0 auto;
+		max-width: 25rem;
+		text-align: center;
+		padding: 1.5rem 5rem;
 	}
 
 	#nav-hamburger {
@@ -137,6 +177,7 @@ input:focus {
 		display: inline;
 		font-size: 1.25rem;
 		text-decoration: none;
+		border: 0;
 	}
 
 	main > .container {
