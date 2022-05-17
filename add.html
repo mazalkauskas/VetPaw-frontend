@@ -35,38 +35,53 @@
 		<header>
 			<div class="container">
 				<div class="row-between">
-					<a href="index.html">
+					<a href="home.html">
 						<img src="./assets/images/logo.svg" alt="VetPawLogo" />
 					</a>
 				</div>
 				<nav>
-					Don't have an account?
-					<a href="register.html">Sign Up</a>
+					<a href="home.html" class="btn2 pd2">Go back</a>
 				</nav>
 			</div>
 		</header>
 		<main>
 			<div class="container2">
-				<h1 class="title">Login to VetPaw</h1>
-				<form name="login">
+				<h1 class="title">Add a pet</h1>
+				<form name="addPet">
 					<div class="control left">
-						<label for="email">Email</label>
-						<input type="email" name="email" id="email" placeholder="Enter your email address" required />
+						<label for="name">Pet name</label>
+						<input type="text" name="name" id="name" placeholder="Enter a pet name" required />
 					</div>
-					<div class="control">
-						<div class="row-between">
-							<label for="password">Password</label>
-							<a href="resetPassword.html">Forgot password?</a>
-						</div>
-						<input type="password" name="password" id="password" placeholder="Enter a password" required />
+					<div class="control left">
+						<label for="email">Owner email</label>
+						<input type="email" name="email" id="email" placeholder="Enter owner email address" required />
+					</div>
+					<div class="control left">
+						<label for="animal">Animal</label>
+						<select name="animal" id="animal" placeholder="Select animal" required>
+							<option value="dog">Dog</option>
+							<option value="cat">Cat</option>
+							<option value="fish">Fish</option>
+							<option value="rabbit">Rabbit</option>
+							<option value="bird">Bird</option>
+							<option value="other">other</option>
+						</select>
+					</div>
+					<div class="control left">
+						<label for="animal">Breed</label>
+						<input type="text" name="breed" id="breed" placeholder="Enter animal breed" required />
+					</div>
+					<div class="control left">
+						<label for="dob">Date of birth</label>
+						<input type="date" name="dob" id="dob" placeholder="Enter a date of birth" required />
 					</div>
 					<div class="msgContainer"></div>
 					<div class="control">
-						<button type="submit" class="btn pd1">Login</button>
+						<button type="submit" class="btn pd1">Add pet</button>
 					</div>
 				</form>
 			</div>
 		</main>
-		<script src="./assets/scripts/login.js"></script>
+		<script src="./assets/scripts/addPet.js"></script>
 	</body>
 </html>

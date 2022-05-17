@@ -22,36 +22,47 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png" />
 		<link rel="manifest" href="assets/images/favicon/site.webmanifest" />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400&display=swap" rel="stylesheet">
-
 		<link rel="stylesheet" href="style.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<header>
-            <div class="container">
-                <div class="row-between">
+			<div class="container">
+				<div class="row-between">
 					<a href="index.html">
 						<img src="./assets/images/logo.svg" alt="VetPawLogo" />
 					</a>
-                    <span class="fa fa-bars" id="nav-hamburger" aria-hidden="true"></sp>
-    
-                </div>
-                <nav>
-                    <a href="register.html">Sign Up</a>
-					<a href="login.html" class="btn pd2">Log In</a>
-
-                </nav>    
-            </div>
+				</div>
+				<nav>
+					<a href="home.html" class="btn2 pd2">Go back</a>
+				</nav>
+			</div>
 		</header>
 		<main>
-			<div class="container">
-				<h1 class="title">Welcome to VetPaw</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, pariatur similique! Earum labore, totam dolorum eligendi commodi quaerat et voluptatum itaque laboriosam tenetur explicabo quod praesentium animi quis maxime tempora.</p>
-
+			<div class="container2">
+				<h1 class="title">Change your password</h1>
+				<form name="change">
+					<div class="control left">
+						<label for="oldPass">Old password</label>
+						<input type="password" name="oldPass" id="oldPass" placeholder="Enter old password" required />
+					</div>
+					<div class="control left">
+						<label for="newPass">New Password</label>
+						<input type="password" name="newPass" id="newPass" placeholder="Enter new password" required />
+					</div>
+					<div class="msgContainer"></div>
+					<div class="control">
+						<button type="submit" class="btn pd1">Sign Up</button>
+					</div>
+				</form>
+			</div>
 		</main>
-		<script src="./assets/scripts/hamburger.js"></script>
+		<script src="./assets/scripts/change.js"></script>
 	</body>
 </html>

@@ -1,8 +1,9 @@
 body {
 	font-family: "Roboto Flex", sans-serif;
 }
+
 header {
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 1px #0000001a;
 	text-align: center;
 }
 
@@ -49,14 +50,14 @@ nav.visible {
 }
 
 nav a {
-	color: #b22727;
+	color: #ee5007;
 	font-size: 1.75rem;
 	display: block;
 	padding: 0.5rem 1rem;
 	margin-bottom: 1rem;
 	text-align: center;
 	text-decoration: none;
-	border: 0.1rem solid #b22727;
+	/* border: 0.1rem solid #ee5007; */
 	border-radius: 0.75rem;
 }
 
@@ -69,11 +70,12 @@ nav a:last-child {
 } */
 
 nav a:hover {
-	background-color: #ee50074f;
+	background-color: #b22727;
 	border: 0;
 	border-radius: 0.75rem;
 	color: #fff;
 	padding: 0.5rem 1rem;
+	transition: 0.6s;
 }
 
 .title {
@@ -81,7 +83,8 @@ nav a:hover {
 	margin-bottom: 1rem;
 }
 
-input {
+input,
+select {
 	border-radius: 0.5rem;
 	border: 0.1rem solid #003b45;
 	box-sizing: border-box;
@@ -98,31 +101,55 @@ label {
 }
 
 input:focus {
-	border-color: rgba(0, 0, 0, 0.5);
+	border-color: #00000080;
 	transition: border-color 0.5s;
 	outline: 0;
 }
 
 .btn {
-	background-color: #b22727;
-	border: 0;
-	border-radius: 0.75rem;
-	color: #fff;
-	padding: 1rem 3rem;
-	text-transform: uppercase;
-}
-
-.btn2 {
 	background-color: #ee5007;
 	border: 0;
 	border-radius: 0.75rem;
 	color: #fff;
+}
+
+.btn2 {
+	border: 0.125rem solid #ee5007;
+	border-radius: 0.75rem;
+	color: #ee5007;
+}
+
+.btn:hover {
+	background-color: #b22727;
+	transition: 0.6s;
+}
+
+.btn2:hover {
+	background-color: #b22727;
+	border: 0.125rem solid #b22727;
+	color: #fff;
+	transition: 0.6s;
+}
+
+.pd1 {
+	padding: 1rem 3rem;
+}
+
+.pd2 {
 	padding: 0.5rem 1rem;
-	text-transform: uppercase;
+}
+
+.m1 {
+	margin: 0.5rem;
 }
 
 .control {
 	padding: 1rem 0;
+}
+
+.control2 > div {
+	display: inline;
+	padding: 0 0.5rem;
 }
 
 .left {
@@ -130,9 +157,16 @@ input:focus {
 }
 
 .msgShow {
-	color: #c6072a;
+	color: #b22727;
 	font-size: 1.1rem;
 	padding: 1rem 0;
+}
+
+.petBox {
+	border: 0.125rem solid #b22727;
+	border-radius: 0.75rem;
+	margin: 0.75rem 0;
+	text-align: center;
 }
 
 @media (min-width: 60rem) {
@@ -175,13 +209,27 @@ input:focus {
 
 	nav a {
 		display: inline;
-		font-size: 1.25rem;
-		text-decoration: none;
-		border: 0;
+		font-size: 1rem;
+		width: 5rem;
 	}
 
 	main > .container {
 		padding-top: 2rem;
 		padding-bottom: 2rem;
+	}
+
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0 auto;
+	}
+
+	.petBox {
+		width: calc(50% - 1rem);
+	}
+
+	a {
+		text-decoration: none;
 	}
 }
