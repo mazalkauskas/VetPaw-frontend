@@ -23,8 +23,60 @@ const deletePet = async (id) => {
 	location.replace("home.html");
 };
 
-const viewLog = async () => {
-	location.replace("logs.html");
+const viewLog = async (id) => {
+	location.replace(`logs.html?pet_id=${id}`);
+};
+
+const showPetData = (data) => {
+	const content = document.querySelector(".content");
+
+	if (data.length > 0) {
+		data.forEach((pet) => {
+			const petName = document.createElement("h3");
+			petName.textContent = firstLetterUp(pet.pet_name);
+
+			const ownerEmail = document.createElement("p");
+			ownerEmail.textContent = "Email: " + pet.owner_email;
+
+			const animal = document.createElement("div");
+			animal.textContent = "Animal: " + firstLetterUp(pet.animal);
+
+			const breed = document.createElement("div");
+			breed.textContent = "Breed: " + firstLetterUp(pet.breed);
+
+			const animalInfo = document.createElement("div");
+			animalInfo.classList.add("control2");
+			animalInfo.append(animal, breed);
+
+			const dob = document.createElement("p");
+			dob.textContent = "Date of birth: " + pet.date_of_birth.toString().slice(0, 10);
+
+			const viewLogBtn = document.createElement("button");
+			viewLogBtn.textContent = "VIEW LOG";
+			viewLogBtn.classList.add("btn", "pd2", "m1");
+			viewLogBtn.addEventListener("click", () => {
+				localStorage.setItem("pet_id", pet.id);
+				localStorage.setItem("pet_name", firstLetterUp(pet.pet_name));
+				viewLog(pet.id);
+			});
+
+			const deleteBtn = document.createElement("button");
+			deleteBtn.textContent = "DELETE";
+			deleteBtn.classList.add("btn2", "pd2", "m1");
+			deleteBtn.addEventListener("click", () => {
+				deletePet(pet.id);
+			});
+
+			const btnBlock = document.createElement("div");
+			btnBlock.classList.add("control2");
+			btnBlock.append(viewLogBtn, deleteBtn);
+
+			const contentBox = document.createElement("div");
+			contentBox.classList.add("contentBox");
+			contentBox.append(petName, ownerEmail, animalInfo, dob, btnBlock);
+			content.append(contentBox);
+		});
+	}
 };
 
 const getPetData = async (token) => {
@@ -40,53 +92,7 @@ const getPetData = async (token) => {
 			return displayMsg(data.err);
 		}
 
-		const content = document.querySelector(".content");
-
-		if (data.length > 0) {
-			data.forEach((pet) => {
-				const petName = document.createElement("h3");
-				petName.textContent = firstLetterUp(pet.pet_name);
-
-				const ownerEmail = document.createElement("p");
-				ownerEmail.textContent = "Email: " + pet.owner_email;
-
-				const animal = document.createElement("div");
-				animal.textContent = "Animal: " + firstLetterUp(pet.animal);
-
-				const breed = document.createElement("div");
-				breed.textContent = "Breed: " + firstLetterUp(pet.breed);
-
-				const animalInfo = document.createElement("div");
-				animalInfo.classList.add("control2");
-				animalInfo.append(animal, breed);
-
-				const dob = document.createElement("p");
-				dob.textContent = "Date of birth: " + pet.date_of_birth.toString().slice(0, 10);
-
-				const viewLogBtn = document.createElement("button");
-				viewLogBtn.textContent = "VIEW LOG";
-				viewLogBtn.classList.add("btn", "pd2", "m1");
-				viewLogBtn.addEventListener("click", () => {
-					viewLog();
-				});
-
-				const deleteBtn = document.createElement("button");
-				deleteBtn.textContent = "DELETE";
-				deleteBtn.classList.add("btn2", "pd2", "m1");
-				deleteBtn.addEventListener("click", () => {
-					deletePet(pet.id);
-				});
-
-				const btnBlock = document.createElement("div");
-				btnBlock.classList.add("control2");
-				btnBlock.append(viewLogBtn, deleteBtn);
-
-				const petBox = document.createElement("div");
-				petBox.classList.add("petBox");
-				petBox.append(petName, ownerEmail, animalInfo, dob, btnBlock);
-				content.append(petBox);
-			});
-		}
+		showPetData(data);
 	} catch (err) {
 		return displayMsg(err);
 	}
