@@ -22,6 +22,7 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png" />
 		<link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+		<link rel="stylesheet" href="style.css" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,42 +30,51 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400&display=swap"
 			rel="stylesheet"
 		/>
-
-		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<header>
 			<div class="container">
-				<div class="top-shelf">
+				<div class="row-between">
 					<a href="home.html">
 						<img src="./assets/images/logo.svg" alt="VetPawLogo" />
 					</a>
-					<span class="fa fa-bars" id="nav-hamburger" aria-hidden="true"></span>
 				</div>
 				<nav>
-					<a href="change.html">Change password</a>
-					<a href="index.html" id="signOut" class="btn2">Sign Out</a>
+					<a href="logs.html" class="btn2 pd2">Go back</a>
 				</nav>
 			</div>
 		</header>
 		<main>
-			<div class="container">
-				<div class="row-between">
-					<h1>Health log</h1>
-					<div>
-						<a href="addLog.html" class="btn pd2">Add Log</a>
-						<a href="addPrescription.html" class="btn pd2">Add prescription</a>
+			<div class="container2">
+				<h1 class="title">Add a Log</h1>
+				<form name="addLog">
+					<div class="control left">
+						<label for="visit_type">Visit type</label>
+						<select name="visit_type" id="visit_type" placeholder="Select visit type" required>
+							<option value="consultation">Consultation</option>
+							<option value="re-consultation">Re-consultation</option>
+							<option value="annual visit">Annual visit</option>
+							<option value="vaccination">Vaccination</option>
+							<option value="other">Other</option>
+						</select>
 					</div>
-				</div>
-				<div class="control2">
-					<h3>Display:</h3>
-					<button class="btn3 pd2 active" id="logFilterBtn">Logs</button>
-					<button class="btn3 pd2 active" id="prescripFilterBtn">Prescriptions</button>
-				</div>
-				<div class="content"></div>
+					<div class="control left">
+						<label for="description">Description</label>
+						<input
+							type="textarea"
+							name="description"
+							id="description"
+							placeholder="Enter a visit description"
+							required
+						/>
+					</div>
+					<div class="msgContainer"></div>
+					<div class="control">
+						<button type="submit" class="btn pd1">Add log</button>
+					</div>
+				</form>
 			</div>
 		</main>
-		<script src="./assets/scripts/hamburger.js"></script>
-		<script src="./assets/scripts/logs.js"></script>
+		<script src="./assets/scripts/addLog.js"></script>
 	</body>
 </html>
