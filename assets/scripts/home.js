@@ -99,7 +99,7 @@ const getPetData = async (token) => {
 };
 
 if (!token) {
-	location.replace("index.html");
+	location.replace("../../index.html");
 } else {
 	getPetData(token);
 }

@@ -55,9 +55,9 @@ const resetPasswordConfirm = async (userData) => {
 		return displayMsg(data.msg);
 	}
 
-	// setTimeout(function () {
-	// 	location.replace("index.html");
-	// }, 5000);
+	setTimeout(function () {
+		location.replace("../../index.html");
+	}, 2000);
 };
 
 loginForm.addEventListener("submit", (event) => {
@@ -68,14 +68,6 @@ loginForm.addEventListener("submit", (event) => {
 
 	login({ email, password });
 });
-
-// resetForm.addEventListener("submit", (event) => {
-// 	event.preventDefault();
-
-// 	const email = event.target.elements.email.value;
-
-// 	resetPassword({ email });
-// });
 
 confirmForm.addEventListener("submit", (event) => {
 	event.preventDefault();

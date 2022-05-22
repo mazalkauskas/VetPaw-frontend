@@ -1,5 +1,5 @@
-// const baseURL = "http://localhost:8080";
-// const token = localStorage.getItem("token");
+const baseURL = "http://localhost:8080";
+const token = localStorage.getItem("token");
 
 const deletePet = async (petId) => {
 	const res = await fetch(`${baseURL}/v1/pets/delete`, {
@@ -16,5 +16,3 @@ const deletePet = async (petId) => {
 		return displayMsg(data.err);
 	}
 };
-
-deletePet(9);

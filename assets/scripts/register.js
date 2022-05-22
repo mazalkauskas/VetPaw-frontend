@@ -24,8 +24,8 @@ const register = async (userData) => {
 	displayMsg("You have successfully created an account!");
 
 	setTimeout(function () {
-		location.replace("index.html");
-	}, 3000);
+		location.replace("../../index.html");
+	}, 2000);
 };
 
 registerForm.addEventListener("submit", (event) => {

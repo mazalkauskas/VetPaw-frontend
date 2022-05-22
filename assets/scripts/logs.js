@@ -115,7 +115,7 @@ const getData = async (token) => {
 };
 
 if (!token) {
-	location.replace("index.html");
+	location.replace("../../index.html");
 } else {
 	getData(token);
 }

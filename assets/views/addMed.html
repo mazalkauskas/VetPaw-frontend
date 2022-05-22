@@ -18,11 +18,10 @@
 			integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY="
 			crossorigin="anonymous"
 		/>
-		<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png" />
-		<link rel="manifest" href="assets/images/favicon/site.webmanifest" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png" />
+		<link rel="manifest" href="../images/favicon/site.webmanifest" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,44 +29,46 @@
 			href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400&display=swap"
 			rel="stylesheet"
 		/>
+
+		<link rel="stylesheet" href="../../style.css" />
 	</head>
 	<body>
 		<header>
 			<div class="container">
 				<div class="row-between">
-					<a href="index.html">
-						<img src="./assets/images/logo.svg" alt="VetPawLogo" />
+					<a href="home.html">
+						<img src="../images/logo.svg" alt="VetPawLogo" />
 					</a>
 				</div>
 				<nav>
-					Already have an account?
-					<a href="login.html">Sign In</a>
+					<a href="addPrescription.html" class="btn2 pd2">Go back</a>
 				</nav>
 			</div>
 		</header>
 		<main>
 			<div class="container2">
-				<h1 class="title">Create your account</h1>
-				<form name="register">
+				<h1 class="title">Add a medication</h1>
+				<form name="addMed">
 					<div class="control left">
-						<label for="username">Name</label>
-						<input type="text" name="username" id="username" placeholder="Enter a name" required />
+						<label for="med_name">Medication name</label>
+						<input type="text" name="med_name" id="med_name" placeholder="Enter a medication name" required />
 					</div>
 					<div class="control left">
-						<label for="email">Email</label>
-						<input type="email" name="email" id="email" placeholder="Enter your email address" required />
-					</div>
-					<div class="control left">
-						<label for="password">Password</label>
-						<input type="password" name="password" id="password" placeholder="Create a password" required />
+						<label for="description">Description</label>
+						<textarea
+							name="description"
+							id="description"
+							placeholder="Enter medication description"
+							required
+						></textarea>
 					</div>
 					<div class="msgContainer"></div>
 					<div class="control">
-						<button type="submit" class="btn pd1">Sign Up</button>
+						<button type="submit" class="btn pd1">Add a medication</button>
 					</div>
 				</form>
 			</div>
 		</main>
-		<script src="./assets/scripts/register.js"></script>
+		<script src="../scripts/addMed.js"></script>
 	</body>
 </html>

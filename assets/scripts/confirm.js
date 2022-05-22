@@ -23,8 +23,8 @@ const resetPasswordConfirm = async (userData) => {
 	}
 
 	setTimeout(function () {
-		location.replace("index.html");
-	}, 3000);
+		location.replace("../../index.html");
+	}, 2000);
 };
 
 confirmForm.addEventListener("submit", (event) => {
