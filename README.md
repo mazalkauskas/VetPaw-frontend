@@ -1,12 +1,12 @@
 <div align="center">
 
-# 🩺 VetPaw app Front-End 🩺
+# 🩺 VetPaw app front-end 🩺
 
 This is a front-end client for a veterinary solution app 🩺. In this app, you can create accounts 🛠, log in, change, reset passwords, create/delete pets 🐈‍ and add logs 📃, prescriptions💊 to the pet.
 
 <br/>
 
-## 🖥️ Back-End repository 🖥️
+## 🖥️ Back-end repository 🖥️
 
 https://github.com/mazalkauskas/VetPaw-backend.git
 
