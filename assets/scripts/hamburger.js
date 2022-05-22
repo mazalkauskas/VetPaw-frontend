@@ -1,5 +1,4 @@
 const hamburger = document.querySelector("#nav-hamburger");
-const bars = document.querySelector(".fa-bars");
 
 hamburger.addEventListener("click", () => {
 	document.querySelector("nav").classList.toggle("visible");

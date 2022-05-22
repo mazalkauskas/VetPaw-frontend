@@ -10,6 +10,7 @@ header {
 .container {
 	color: #003b45;
 	padding: 1.5rem;
+	text-align: center;
 }
 
 .container2 {
@@ -28,7 +29,8 @@ header img {
 	height: 4rem;
 }
 
-#nav-hamburger {
+#nav-hamburger,
+#nav-back {
 	color: #ee5007;
 	font-size: 2rem;
 }
@@ -53,7 +55,7 @@ nav a {
 	border-radius: 0.75rem;
 	color: #ee5007;
 	display: block;
-	font-size: 1.75rem;
+	font-size: 1.25rem;
 	margin-bottom: 1rem;
 	padding: 0.5rem 1rem;
 	text-align: center;
@@ -164,6 +166,18 @@ input:focus {
 	padding: 0 0.5rem;
 }
 
+.row-wrap {
+	display: flex;
+	padding: 0.5rem 0;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.row-wrap > h1,
+.row-wrap > h3 {
+	margin: 0.5rem 0;
+}
+
 .left {
 	text-align: left;
 }
@@ -181,6 +195,19 @@ input:focus {
 	text-align: center;
 }
 
+.flex-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.nowrap > div {
+	margin: 0 0.5rem;
+}
+
+a {
+	text-decoration: none;
+}
+
 @media (min-width: 60rem) {
 	.container {
 		margin: 0 auto;
@@ -194,7 +221,8 @@ input:focus {
 		text-align: center;
 	}
 
-	#nav-hamburger {
+	#nav-hamburger,
+	#nav-back {
 		display: none;
 	}
 
@@ -243,5 +271,14 @@ input:focus {
 
 	a {
 		text-decoration: none;
+	}
+
+	.row-wrap {
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.nowrap {
+		justify-content: left;
 	}
 }

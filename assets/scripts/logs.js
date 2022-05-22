@@ -17,7 +17,7 @@ const displayMsg = (message) => {
 };
 
 const showPetName = () => {
-	const title = document.querySelector(".row-between > h1");
+	const title = document.querySelector(".row-wrap > h1");
 	title.textContent = localStorage.getItem("pet_name") + ": Health records";
 };
 

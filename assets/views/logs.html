@@ -35,7 +35,7 @@
 	<body>
 		<header>
 			<div class="container">
-				<div class="top-shelf">
+				<div class="row-between">
 					<a href="home.html">
 						<img src="../images/logo.svg" alt="VetPawLogo" />
 					</a>
@@ -49,17 +49,19 @@
 		</header>
 		<main>
 			<div class="container">
-				<div class="row-between">
+				<div class="row-wrap">
 					<h1>Health log</h1>
 					<div>
 						<a href="addLog.html" class="btn pd2">Add Log</a>
 						<a href="addPrescription.html" class="btn pd2">Add prescription</a>
 					</div>
 				</div>
-				<div class="control2">
+				<div class="row-wrap nowrap">
 					<h3>Display:</h3>
-					<button class="btn3 pd2 active" id="logFilterBtn">Logs</button>
-					<button class="btn3 pd2 active" id="prescripFilterBtn">Prescriptions</button>
+					<div>
+						<button class="btn3 pd2 active" id="logFilterBtn">Logs</button>
+						<button class="btn3 pd2 active" id="prescripFilterBtn">Prescriptions</button>
+					</div>
 				</div>
 				<div class="content"></div>
 			</div>
