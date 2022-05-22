@@ -25,6 +25,22 @@ header {
 	justify-content: space-between;
 }
 
+.row-wrap {
+	display: flex;
+	padding: 0.5rem 0;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.row-wrap > h1,
+.row-wrap > h3 {
+	margin: 0.5rem 0;
+}
+
+.nowrap > div {
+	margin: 0 0.5rem;
+}
+
 header img {
 	height: 4rem;
 }
@@ -166,18 +182,6 @@ input:focus {
 	padding: 0 0.5rem;
 }
 
-.row-wrap {
-	display: flex;
-	padding: 0.5rem 0;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.row-wrap > h1,
-.row-wrap > h3 {
-	margin: 0.5rem 0;
-}
-
 .left {
 	text-align: left;
 }
@@ -193,15 +197,6 @@ input:focus {
 	border: 0.125rem solid #b22727;
 	margin: 0.75rem 0;
 	text-align: center;
-}
-
-.flex-wrap {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.nowrap > div {
-	margin: 0 0.5rem;
 }
 
 a {
