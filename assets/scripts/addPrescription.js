@@ -60,8 +60,6 @@ addPrescripForm.addEventListener("submit", (event) => {
 	const medication_id = Number(event.target.elements.medication_id.value);
 	const comment = event.target.elements.comment.value;
 
-	console.log({ pet_id, medication_id, comment });
-
 	addPrescrip({ pet_id, medication_id, comment });
 });
 

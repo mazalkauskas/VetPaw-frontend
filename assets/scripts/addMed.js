@@ -32,7 +32,5 @@ addMedForm.addEventListener("submit", (event) => {
 	const med_name = event.target.elements.med_name.value;
 	const description = event.target.elements.description.value;
 
-	console.log({ med_name, description });
-
 	addMed({ med_name, description });
 });

@@ -34,7 +34,5 @@ addLogForm.addEventListener("submit", (event) => {
 	const visit_type = event.target.elements.visit_type.value;
 	const description = event.target.elements.description.value;
 
-	console.log({ pet_id, visit_type, description });
-
 	addLog({ pet_id, visit_type, description });
 });

@@ -49,8 +49,6 @@ const resetPasswordConfirm = async (userData) => {
 	});
 	const data = await res.json();
 
-	console.log(data);
-
 	if (data.msg) {
 		return displayMsg(data.msg);
 	}

@@ -35,7 +35,5 @@ addForm.addEventListener("submit", (event) => {
 	const breed = event.target.elements.breed.value;
 	const date_of_birth = event.target.elements.dob.value;
 
-	console.log({ name, email, animal, breed, date_of_birth });
-
 	addPet({ pet_name, owner_email, animal, breed, date_of_birth });
 });
