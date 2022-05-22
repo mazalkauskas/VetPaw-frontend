@@ -49,12 +49,15 @@
 				<h1 class="title">Add a new prescription</h1>
 				<form name="addPrescrip">
 					<div class="control left">
-						<label for="medication_id">Medication</label>
+						<div class="row-between">
+							<label for="medication_id">Medication</label>
+							<a href="addMed.html">Add mew medicine</a>
+						</div>
 						<select name="medication_id" id="medication_id" placeholder="Select a medicine" required></select>
 					</div>
 					<div class="control left">
 						<label for="comment">Comment</label>
-						<input type="textarea" name="comment" id="comment" placeholder="Enter a comment" required />
+						<textarea name="comment" id="comment" placeholder="Enter a comment" required></textarea>
 					</div>
 					<div class="msgContainer"></div>
 					<div class="control">

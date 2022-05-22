@@ -40,35 +40,34 @@
 					</a>
 				</div>
 				<nav>
-					<a href="logs.html" class="btn2 pd2">Go back</a>
+					<a href="addPrescription.html" class="btn2 pd2">Go back</a>
 				</nav>
 			</div>
 		</header>
 		<main>
 			<div class="container2">
-				<h1 class="title">Add a new log</h1>
-				<form name="addLog">
+				<h1 class="title">Add a medication</h1>
+				<form name="addMed">
 					<div class="control left">
-						<label for="visit_type">Visit type</label>
-						<select name="visit_type" id="visit_type" placeholder="Select visit type" required>
-							<option value="consultation">Consultation</option>
-							<option value="re-consultation">Re-consultation</option>
-							<option value="annual visit">Annual visit</option>
-							<option value="vaccination">Vaccination</option>
-							<option value="other">Other</option>
-						</select>
+						<label for="med_name">Medication name</label>
+						<input type="text" name="med_name" id="med_name" placeholder="Enter a medication name" required />
 					</div>
 					<div class="control left">
 						<label for="description">Description</label>
-						<textarea name="description" id="description" placeholder="Enter a visit description" required></textarea>
+						<textarea
+							name="description"
+							id="description"
+							placeholder="Enter medication description"
+							required
+						></textarea>
 					</div>
 					<div class="msgContainer"></div>
 					<div class="control">
-						<button type="submit" class="btn pd1">Add log</button>
+						<button type="submit" class="btn pd1">Add a medication</button>
 					</div>
 				</form>
 			</div>
 		</main>
-		<script src="./assets/scripts/addLog.js"></script>
+		<script src="./assets/scripts/addMed.js"></script>
 	</body>
 </html>

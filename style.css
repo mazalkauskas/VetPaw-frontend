@@ -84,7 +84,8 @@ nav a:hover {
 }
 
 input,
-select {
+select,
+textarea {
 	border-radius: 0.5rem;
 	border: 0.1rem solid #003b45;
 	box-sizing: border-box;
@@ -92,6 +93,10 @@ select {
 	height: 2.5rem;
 	padding: 0.5rem 0.5rem;
 	width: 100%;
+}
+
+textarea {
+	min-height: 10rem;
 }
 
 label {
